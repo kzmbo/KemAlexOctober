@@ -1,0 +1,13 @@
+class Solution {
+    public int titleToNumber(String columnTitle) {
+        int x = ( (int) columnTitle.charAt(0) ) - 64;
+        int y = 0;
+        
+        for(int i = 1; i < columnTitle.length(); i++){
+            y = 26 * x + ( (int) columnTitle.charAt(i) - 64 );
+            x = y;
+        }
+       
+        return x;
+    }
+}
